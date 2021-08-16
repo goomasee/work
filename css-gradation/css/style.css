@@ -1,0 +1,67 @@
+@charset "utf-8";
+
+*{margin:0; padding:0; box-sizing: border-box;}
+
+html,body{width:100%; height:100%;}
+
+.wrap{width:100%; height:100%;}
+.contents-inner{width: 1000px;height:100%;margin: 0 auto;padding-top: 310px;}
+.pipe{position:relative;}
+.pipe.firstLine{width: 100%;margin:0 auto;z-index: 1000;}
+.pipe.firstLine > img{display:block; margin:0 auto;}
+
+.waterWave-wrap{position:absolute;top: 0;left:0;width: 100%;height: 100%;}
+.waterWave-wrap .water-bar{
+    position: absolute;
+    height: 32px;
+    display: none;
+    background: linear-gradient(89deg, #91d6f9,#009ae8,#91d6f9,#91d6f9,#009ae8,#91d6f9,#91d6f9,#009ae8,#91d6f9);
+    background-size: 400%;
+    animation-name: gradient;
+    animation-duration: 3.5s;
+    animation-timing-function: linear;
+    animation-iteration-count : infinite;
+    animation-fill-mode : forwards;
+    }
+
+    @keyframes gradient {
+        0% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+.waterWave-wrap .water-bar.active {display: block;}
+
+.waterWave-wrap .water-bar.bar1{width: 200px;top: 97px;left: 55px;}
+.waterWave-wrap .water-bar.bar3{width: 32px;height: 100px;top: 29px;left: 387px;}
+.waterWave-wrap .water-bar.bar5{width: 340px;top: 97px;right: 55px;}
+.waterWave-wrap .water-bar.bar3{
+    background: linear-gradient(0deg, #91d6f9,#009ae8,#91d6f9,#91d6f9,#009ae8,#91d6f9,#91d6f9,#009ae8,#91d6f9);
+    background-size: 100% 400%;
+    animation-name: gradient2;
+    animation-duration: 3.5s;
+    animation-timing-function: linear;
+    animation-iteration-count : infinite;
+    animation-fill-mode : forwards;
+    }
+
+    @keyframes gradient2 {
+        0% {
+          background-position: 50% 100%;
+        }
+        100% {
+          background-position: 50% 0%;
+        }
+      }
+      .waterWave-wrap .water-bar.bar2{width: 260px;top: 3px;left: 233px;}
+      .waterWave-wrap .water-bar.bar4{width: 200px;top: 3px;right: 3px;}
+.pipe.secLine{
+    border: 1px dotted #8e8e8e;
+    height: 40px;
+    z-index: 1;
+    width: 880px;
+    margin: 0px auto;
+    margin-top: -83px;
+}
